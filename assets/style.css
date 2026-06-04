@@ -242,9 +242,37 @@ ul { list-style: none; }
    ============================================================ */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 260px;
-  gap: 3rem;
+  grid-template-columns: 180px 1fr 260px;
+  gap: 2.5rem;
   align-items: start;
+}
+.about-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.25rem;
+}
+.about-photo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #30363d;
+  object-fit: cover;
+}
+.photo-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1c2128 0%, #21262d 100%);
+  border: 3px solid #30363d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #58a6ff;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
 }
 .about-text p { margin-bottom: 1rem; color: #c9d1d9; font-size: 0.9375rem; }
 .about-text strong { color: #e6edf3; }
@@ -581,10 +609,68 @@ footer {
 }
 
 /* ============================================================
+   NEWS
+   ============================================================ */
+.news-list { display: flex; flex-direction: column; gap: 1rem; }
+.news-card {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-left: 3px solid #58a6ff;
+  border-radius: 8px;
+  padding: 1.25rem 1.4rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.news-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 4px 20px rgba(88, 166, 255, 0.07);
+}
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+.news-date {
+  font-size: 0.78rem;
+  color: #6e7681;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.news-tag {
+  padding: 0.15rem 0.65rem;
+  border-radius: 12px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.tag-publication { background: rgba(63,185,80,0.1);   color: #3fb950; border: 1px solid rgba(63,185,80,0.3); }
+.tag-research    { background: rgba(88,166,255,0.1);  color: #58a6ff; border: 1px solid rgba(88,166,255,0.3); }
+.tag-update      { background: rgba(163,113,247,0.1); color: #a371f7; border: 1px solid rgba(163,113,247,0.3); }
+.news-text {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  line-height: 1.65;
+  margin-bottom: 0.85rem;
+}
+.news-link {
+  font-size: 0.8rem;
+  color: #58a6ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s, gap 0.2s;
+}
+.news-link:hover { color: #79c0ff; gap: 0.55rem; }
+
+/* ============================================================
    RESPONSIVE — TABLET
    ============================================================ */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; }
+  .about-photo { flex-direction: row; gap: 1.5rem; align-items: center; }
   .about-stats { max-width: 320px; }
   .research-grid { grid-template-columns: repeat(2, 1fr); }
   .edu-grid { grid-template-columns: 1fr; }
