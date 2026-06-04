@@ -242,37 +242,9 @@ ul { list-style: none; }
    ============================================================ */
 .about-grid {
   display: grid;
-  grid-template-columns: 180px 1fr 260px;
-  gap: 2.5rem;
+  grid-template-columns: 1fr 260px;
+  gap: 3rem;
   align-items: start;
-}
-.about-photo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0.25rem;
-}
-.about-photo img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 3px solid #30363d;
-  object-fit: cover;
-}
-.photo-placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #1c2128 0%, #21262d 100%);
-  border: 3px solid #30363d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #58a6ff;
-  font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 0.05em;
 }
 .about-text p { margin-bottom: 1rem; color: #c9d1d9; font-size: 0.9375rem; }
 .about-text strong { color: #e6edf3; }
@@ -670,7 +642,6 @@ footer {
    ============================================================ */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; }
-  .about-photo { flex-direction: row; gap: 1.5rem; align-items: center; }
   .about-stats { max-width: 320px; }
   .research-grid { grid-template-columns: repeat(2, 1fr); }
   .edu-grid { grid-template-columns: 1fr; }
