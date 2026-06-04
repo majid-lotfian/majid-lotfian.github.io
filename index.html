@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Majid Lotfian Delouee | Foundation Model Researcher & Data Scientist</title>
+  <meta name="description" content="Postdoctoral Researcher at Amsterdam UMC. Foundation models, clinical AI, stream processing, federated learning. PhD from University of Groningen. 41+ citations.">
+  <meta name="keywords" content="foundation models, data scientist, machine learning, LLM, clinical AI, applied researcher, Amsterdam UMC, federated learning">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ── NAVBAR ─────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">MLD</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────────── -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-greeting">Hello, I'm</p>
+    <h1 class="hero-name">Majid Lotfian Delouee</h1>
+    <div class="hero-title-wrapper">
+      <span class="hero-title-static">I'm a&nbsp;</span>
+      <span class="hero-title-dynamic" id="typewriter"></span><span class="cursor">|</span>
+    </div>
+    <p class="hero-subtitle">
+      Ph.D. Computer Science &nbsp;·&nbsp; Postdoctoral Researcher, Amsterdam UMC &nbsp;·&nbsp; 41+ citations &nbsp;·&nbsp; EU citizen
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      <a href="#publications" class="btn btn-secondary">Publications</a>
+      <a href="https://github.com/majid-lotfian" target="_blank" rel="noopener" class="btn btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/majid-lotfian-delouee" target="_blank" rel="noopener" class="btn btn-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:majid.lotfian@yahoo.com" class="btn btn-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- ── ABOUT ──────────────────────────────────────────────── -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a researcher and ML engineer with a <strong>Ph.D. in Computer Science</strong> (University of Groningen, 2024) and currently a <strong>Postdoctoral Researcher at Amsterdam UMC's Translational AI Lab</strong>. My work spans the full spectrum — from pre-training foundation models from scratch to deploying production ML pipelines for real-world clinical impact.</p>
+        <p>My doctoral research pioneered real-time complex event processing, privacy-preserving stream systems, and LLM-assisted rule generation for high-volume data streams using Apache Kafka and Flink. At Amsterdam UMC, I train and evaluate transformer-based foundation models on clinical datasets of <strong>1.2M+ records</strong>, in collaboration with the University of Cambridge.</p>
+        <p>I am equally at home in fundamental research — designing novel architectures and evaluation frameworks — and applied engineering — building scalable pipelines, MLOps workflows, and production-quality systems. I hold research affiliations with the University of Amsterdam, University of Oslo, and TU Ilmenau.</p>
+        <p class="about-location">
+          <i class="fas fa-map-marker-alt"></i>&nbsp;Almere, Netherlands
+          &nbsp;<span class="badge">EU Citizen · No visa required</span>
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-number">41+</span>
+          <span class="stat-label">Citations</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">14+</span>
+          <span class="stat-label">Publications</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">6+</span>
+          <span class="stat-label">Years Research</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Institutions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESEARCH AREAS ─────────────────────────────────────── -->
+<section id="research" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Research &amp; Expertise</h2>
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-icon"><i class="fas fa-brain"></i></div>
+        <h3>Foundation Models &amp; LLMs</h3>
+        <p>Pre-training transformer models from scratch, fine-tuning, PEFT/LoRA, domain adaptation, and LLM-assisted system design for structured tasks.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3>Clinical AI &amp; Healthcare</h3>
+        <p>ML pipelines on large-scale clinical datasets, patient classification, biomarker discovery, and clinical decision support systems.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-icon"><i class="fas fa-stream"></i></div>
+        <h3>Stream Processing &amp; CEP</h3>
+        <p>Real-time event processing with Apache Kafka and Flink, complex event pattern detection, and high-throughput distributed pipelines.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-icon"><i class="fas fa-network-wired"></i></div>
+        <h3>Federated Learning</h3>
+        <p>Privacy-preserving distributed training across institutions, federated evaluation frameworks, embedding-based FL, and governance mechanisms.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-icon"><i class="fas fa-search"></i></div>
+        <h3>Anomaly Detection</h3>
+        <p>Pattern and anomaly detection in high-volume data streams, temporal pattern analysis, distributional shift detection, and risk scoring.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-icon"><i class="fas fa-cogs"></i></div>
+        <h3>MLOps &amp; ML Engineering</h3>
+        <p>End-to-end ML pipelines, experiment tracking with W&amp;B, reproducible workflows, Docker, and production-quality system design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ─────────────────────────────────────────── -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Postdoctoral Researcher — Foundation Models &amp; Clinical AI</h3>
+            <span class="timeline-badge current">Current</span>
+          </div>
+          <p class="timeline-org"><i class="fas fa-building"></i>&nbsp;Amsterdam UMC · Translational AI Lab</p>
+          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2024 – Present · Amsterdam, Netherlands</p>
+          <ul>
+            <li>Training transformer-based foundation models from scratch on clinical datasets with <strong>1.2M+ records</strong> and 500+ features; architecture design, pre-training, multi-task fine-tuning, evaluation</li>
+            <li>Building scalable PyTorch training pipelines with distributed data loading, mixed-precision training, and W&amp;B experiment tracking</li>
+            <li>Developing federated training frameworks with the <strong>University of Cambridge</strong>: multi-institutional aggregation, governance, and privacy-preserving model updates</li>
+            <li>Foundation models for mass spectrometry data (MassSpecFormer): pre-training on unlabelled spectra, fine-tuning for classification and retrieval</li>
+            <li>Publishing at npj Digital Medicine, Journal of Biomedical Informatics, and Artificial Intelligence in Medicine</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Guest Researcher</h3>
+          </div>
+          <p class="timeline-org"><i class="fas fa-building"></i>&nbsp;University of Amsterdam · IDEAL Lab &amp; Complex Cyber Infrastructure Group</p>
+          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2020 – 2024 · Amsterdam, Netherlands</p>
+          <ul>
+            <li>Research collaboration on intelligent data engineering, privacy, and distributed computing</li>
+            <li>Contributing to multi-institutional projects bridging event systems and privacy-preserving analytics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Research Staff — Parrot Project</h3>
+          </div>
+          <p class="timeline-org"><i class="fas fa-building"></i>&nbsp;University of Oslo · Analytical Solutions &amp; Reasoning Group</p>
+          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2020 – 2024 · Oslo, Norway</p>
+          <ul>
+            <li>Multinational research initiative on event processing, data quality, and privacy in distributed systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>PhD Researcher — Real-Time Systems &amp; LLM-Assisted CEP</h3>
+          </div>
+          <p class="timeline-org"><i class="fas fa-building"></i>&nbsp;University of Groningen · Distributed Systems Group</p>
+          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2020 – 2024 · Groningen, Netherlands</p>
+          <ul>
+            <li>Built real-time anomaly and event detection systems using <strong>Apache Kafka</strong> and <strong>Apache Flink</strong> for high-volume IoT data streams</li>
+            <li>Developed <strong>GPT-CEP</strong>: LLM-assisted pipeline that automatically translates latent data patterns into interpretable detection rules deployed in live streaming environments</li>
+            <li>Designed privacy-preserving complex event processing: App-CEP with adaptive pattern-level privacy protection</li>
+            <li>Built federated learning frameworks across distributed institutional environments with runtime governance</li>
+            <li>Published at ACM DEBS, IEEE MSN, Elsevier Information Systems, and Springer SN Computer Science</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>External Member</h3>
+          </div>
+          <p class="timeline-org"><i class="fas fa-building"></i>&nbsp;TU Ilmenau · Distributed Systems &amp; Operating Systems Group</p>
+          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2020 – 2024 · Ilmenau, Germany</p>
+          <ul>
+            <li>Research collaboration on distributed event-based systems and quality-aware IoT processing</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ──────────────────────────────────────────── -->
+<section id="education" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-info">
+          <h3>PhD in Computer Science</h3>
+          <p class="edu-school">University of Groningen, Netherlands</p>
+          <p class="edu-year">2020 – 2024</p>
+          <p class="edu-thesis">Thesis: <em>"Adapting Event Processing in Dynamic IoT Applications: Meeting Evolving Requirements for Quality, Privacy, and Rule Autonomy"</em></p>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-university"></i></div>
+        <div class="edu-info">
+          <h3>Master's in Software Engineering</h3>
+          <p class="edu-school">Specialization: Networks &amp; Information Systems for IoT</p>
+          <p class="edu-thesis">Research: trade-off between quality monitoring and privacy protection in event processing systems</p>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="edu-info">
+          <h3>Bachelor's in Software Engineering</h3>
+          <p class="edu-school">Foundation in software systems and engineering principles</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────────── -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skills-group">
+        <h3><i class="fas fa-brain"></i> ML &amp; Deep Learning</h3>
+        <div class="skill-tags">
+          <span class="tag hl">PyTorch</span>
+          <span class="tag hl">HuggingFace</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">XGBoost</span>
+          <span class="tag">Transformers</span>
+          <span class="tag">PEFT / LoRA</span>
+          <span class="tag">Pre-training</span>
+          <span class="tag">Fine-tuning</span>
+          <span class="tag">imbalanced-learn</span>
+          <span class="tag">Anomaly Detection</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <h3><i class="fas fa-database"></i> Data Engineering</h3>
+        <div class="skill-tags">
+          <span class="tag hl">Apache Kafka</span>
+          <span class="tag hl">Apache Flink</span>
+          <span class="tag">Apache Spark</span>
+          <span class="tag">SQL</span>
+          <span class="tag">pandas</span>
+          <span class="tag">numpy</span>
+          <span class="tag">Distributed Pipelines</span>
+          <span class="tag">Stream Processing</span>
+          <span class="tag">Time-series Analysis</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <h3><i class="fas fa-tools"></i> MLOps &amp; Infrastructure</h3>
+        <div class="skill-tags">
+          <span class="tag hl">Weights &amp; Biases</span>
+          <span class="tag">MLFlow</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Git</span>
+          <span class="tag">Linux</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Experiment Tracking</span>
+          <span class="tag">Reproducible Workflows</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <h3><i class="fas fa-code"></i> Programming</h3>
+        <div class="skill-tags">
+          <span class="tag hl">Python</span>
+          <span class="tag hl">SQL</span>
+          <span class="tag">C / C++</span>
+          <span class="tag">Java</span>
+          <span class="tag">Bash / Shell</span>
+          <span class="tag">LaTeX</span>
+          <span class="tag">REST APIs</span>
+        </div>
+      </div>
+      <div class="skills-group skills-group-wide">
+        <h3><i class="fas fa-language"></i> Languages</h3>
+        <div class="skill-tags">
+          <span class="tag hl">English — Fluent</span>
+          <span class="tag">Dutch — Upper Intermediate</span>
+          <span class="tag">Persian — Native</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ───────────────────────────────────────────── -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://github.com/majid-lotfian/FBC-Transformer" target="_blank" rel="noopener" class="project-link" aria-label="FBC-Transformer on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>FBC-Transformer</h3>
+        <p>Transformer-based foundation model trained from scratch on 1.2M+ clinical records. Custom tokenizer, pre-training loop with masked objectives, multi-task fine-tuning heads, and full evaluation harness with W&amp;B tracking.</p>
+        <div class="project-tags">
+          <span>Python</span><span>PyTorch</span><span>HuggingFace</span><span>W&amp;B</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://github.com/majid-lotfian/MassSpectra_FoundationModel" target="_blank" rel="noopener" class="project-link" aria-label="MassSpectra FM on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>MassSpectra Foundation Model</h3>
+        <p>Transformer-based foundation model for high-dimensional mass spectrometry signals. Pre-training on unlabelled spectra, fine-tuning for classification and retrieval. Custom positional encodings for variable-length spectral inputs.</p>
+        <div class="project-tags">
+          <span>Python</span><span>PyTorch</span><span>HuggingFace</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://github.com/majid-lotfian/Embedding-Space-Discovery" target="_blank" rel="noopener" class="project-link" aria-label="Embedding Space Discovery on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Embedding Space Discovery</h3>
+        <p>Geometry-based framework for analysing learned embedding spaces from foundation models. Clustering, label-free correspondence metrics, nearest-neighbour retrieval, and visualisation pipelines for discovering latent clinical structure.</p>
+        <div class="project-tags">
+          <span>Python</span><span>PyTorch</span><span>scikit-learn</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://github.com/majid-lotfian/GPT-CEP" target="_blank" rel="noopener" class="project-link" aria-label="GPT-CEP on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>GPT-CEP</h3>
+        <p>Federated LLM system for automated complex event processing rule generation and refinement. LLM reasoning combined with rule-based backends over live Kafka/Flink distributed pipelines with monitoring and feedback loops.</p>
+        <div class="project-tags">
+          <span>Python</span><span>Apache Kafka</span><span>Apache Flink</span><span>GPT API</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://github.com/majid-lotfian/APP-CEP" target="_blank" rel="noopener" class="project-link" aria-label="APP-CEP on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>APP-CEP</h3>
+        <p>Adaptive pattern-level privacy protection in complex event processing systems. Enforces privacy at the pattern level (not data level) using CEP-like processing in Apache Flink. Published in Elsevier Information Systems (2024).</p>
+        <div class="project-tags">
+          <span>Java</span><span>Apache Flink</span><span>Privacy</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <a href="https://github.com/majid-lotfian/SmartScreening-CH" target="_blank" rel="noopener" class="project-link" aria-label="SmartScreening-CH on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>SmartScreening-CH</h3>
+        <p>Clinical foundation models and ML pipelines for early detection of Congenital Hypothyroidism. Combines deep learning with classical models to support newborn screening; embedding-based patient similarity and classification.</p>
+        <div class="project-tags">
+          <span>Python</span><span>Clinical AI</span><span>Foundation Models</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="projects-more">
+      <a href="https://github.com/majid-lotfian" target="_blank" rel="noopener" class="btn btn-secondary">
+        View All on GitHub &nbsp;<i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PUBLICATIONS ───────────────────────────────────────── -->
+<section id="publications" class="section">
+  <div class="container">
+    <h2 class="section-title">Publications</h2>
+    <p class="section-subtitle">41+ citations &nbsp;·&nbsp; Google Scholar, June 2026</p>
+
+    <div class="pub-tabs">
+      <button class="pub-tab active" data-tab="all">All</button>
+      <button class="pub-tab" data-tab="journal">Journals</button>
+      <button class="pub-tab" data-tab="conference">Conferences &amp; Workshops</button>
+      <button class="pub-tab" data-tab="review">Under Review</button>
+    </div>
+
+    <div class="pub-list" id="pubList">
+
+      <!-- Journals -->
+      <div class="pub-item" data-type="journal">
+        <span class="pub-badge journal">Journal</span>
+        <p class="pub-title">App-CEP: Adaptive Pattern-Level Privacy Protection in Complex Event Processing Systems</p>
+        <p class="pub-venue"><em>Information Systems</em>, Elsevier · 2024 &nbsp;<span class="pub-citations">· 4 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, V. Degeler, P. Amthor, et al.</p>
+      </div>
+      <div class="pub-item" data-type="journal">
+        <span class="pub-badge journal">Journal</span>
+        <p class="pub-title">Pattern-Level Privacy Protection in Event-Based Systems</p>
+        <p class="pub-venue"><em>SN Computer Science</em>, Springer · 2025</p>
+        <p class="pub-authors">M. Lotfian Delouee, V. Degeler, P. Amthor, M. C. Schut, et al.</p>
+      </div>
+
+      <!-- Conferences -->
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge conference">Conference</span>
+        <p class="pub-title">AQUA-CEP: Adaptive Quality-Aware Complex Event Processing in the Internet of Things</p>
+        <p class="pub-venue"><em>17th ACM International Conference on Distributed and Event-based Systems (DEBS)</em> · 2023 &nbsp;<span class="pub-citations">· 16 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, et al.</p>
+      </div>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge conference">Conference</span>
+        <p class="pub-title">Towards Adaptive Quality-Aware Complex Event Processing in the Internet of Things</p>
+        <p class="pub-venue"><em>18th IEEE International Conference on Mobility, Sensing and Networking (MSN)</em> · 2022 &nbsp;<span class="pub-citations">· 8 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, et al.</p>
+      </div>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge conference">Conference</span>
+        <p class="pub-title">Towards Federated LLM-Powered CEP Rule Generation and Refinement</p>
+        <p class="pub-venue"><em>18th ACM International Conference on Distributed and Event-based Systems (DEBS)</em> · 2024 &nbsp;<span class="pub-citations">· 3 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, D. G. Pernes, V. Degeler, et al.</p>
+      </div>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge conference">Conference</span>
+        <p class="pub-title">Driving Towards Efficiency: Adaptive Resource-Aware Clustered Federated Learning in Vehicular Networks</p>
+        <p class="pub-venue"><em>22nd Mediterranean Communication and Computer Networking Conference (MedComNet)</em> · 2024 &nbsp;<span class="pub-citations">· 7 citations</span></p>
+        <p class="pub-authors">A. Khalil, M. Lotfian Delouee, V. Degeler, et al.</p>
+      </div>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge workshop">Workshop · Accepted</span>
+        <p class="pub-title">Embedding-Based Federated Learning with Runtime Governance for Iron Deficiency Prediction</p>
+        <p class="pub-venue"><em>FL-ICML Workshop on Federated Learning in the Age of Foundation Models (FLICS)</em> · <strong>Accepted 2026</strong> · with University of Cambridge</p>
+        <p class="pub-authors">F. Zhang, S. Deltadahl, M. Lotfian Delouee, D. Kreuter, et al.</p>
+      </div>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge poster">Poster</span>
+        <p class="pub-title">Towards Pattern-Level Privacy Protection in Distributed Complex Event Processing</p>
+        <p class="pub-venue"><em>17th ACM DEBS</em> · 2023 &nbsp;<span class="pub-citations">· 3 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, et al.</p>
+      </div>
+
+      <!-- Under review -->
+      <div class="pub-item" data-type="review">
+        <span class="pub-badge review">Under Review</span>
+        <p class="pub-title">A Comparative Framework for Evaluating Foundation Models on Tabular Data: A Case Study in Healthcare</p>
+        <p class="pub-venue"><em>npj Digital Medicine</em></p>
+        <p class="pub-authors">M. Lotfian Delouee et al.</p>
+      </div>
+      <div class="pub-item" data-type="review">
+        <span class="pub-badge review">Under Review</span>
+        <p class="pub-title">A Label-Free Correspondence Score for Validating Learned Patient Representations in Clinical Tabular Data</p>
+        <p class="pub-venue"><em>Journal of Biomedical Informatics</em></p>
+        <p class="pub-authors">M. Lotfian Delouee et al.</p>
+      </div>
+      <div class="pub-item" data-type="review">
+        <span class="pub-badge review">Under Review</span>
+        <p class="pub-title">From Latent Biomarkers to Clinical Rules: Embedding-Guided Rule Mining and Attribution-Based Translation for Interpretable Tabular Learning</p>
+        <p class="pub-venue"><em>Artificial Intelligence in Medicine</em></p>
+        <p class="pub-authors">M. Lotfian Delouee et al.</p>
+      </div>
+      <div class="pub-item" data-type="review">
+        <span class="pub-badge review">Under Review</span>
+        <p class="pub-title">Patient Classification via Learned Embedding Spaces: Application to Congenital Hypothyroidism Screening</p>
+        <p class="pub-venue"><em>CIBB 2026</em></p>
+        <p class="pub-authors">M. Lotfian Delouee et al.</p>
+      </div>
+      <div class="pub-item" data-type="review">
+        <span class="pub-badge preprint">Under Submission</span>
+        <p class="pub-title">Embedding Space Discovery: Geometry-Based Clinical Data Analysis for Patient Similarity</p>
+        <p class="pub-venue">Under Submission</p>
+        <p class="pub-authors">M. Lotfian Delouee et al.</p>
+      </div>
+
+    </div>
+
+    <div class="thesis-note">
+      <i class="fas fa-book"></i>
+      <div><strong>PhD Thesis (2025):</strong> "Adapting Event Processing in Dynamic IoT Applications: Meeting Evolving Requirements for Quality, Privacy, and Rule Autonomy" — University of Groningen</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────────── -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">Open to research collaborations, foundation model roles, applied AI positions, and data science opportunities. EU citizen — no visa required.</p>
+    <div class="contact-grid">
+      <a href="mailto:majid.lotfian@yahoo.com" class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <span>majid.lotfian@yahoo.com</span>
+      </a>
+      <a href="https://linkedin.com/in/majid-lotfian-delouee" target="_blank" rel="noopener" class="contact-card">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn Profile</span>
+      </a>
+      <a href="https://github.com/majid-lotfian" target="_blank" rel="noopener" class="contact-card">
+        <i class="fab fa-github"></i>
+        <span>GitHub Repos</span>
+      </a>
+      <div class="contact-card no-link">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Almere, Netherlands</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <p>© 2026 Majid Lotfian Delouee &nbsp;·&nbsp; Built with GitHub Pages</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
