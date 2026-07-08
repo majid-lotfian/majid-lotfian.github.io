@@ -14,12 +14,12 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 // ── Typewriter ───────────────────────────────────────────────
 const titles = [
-  'Foundation Model Researcher',
-  'Applied AI Scientist',
-  'Data Scientist',
-  'ML Research Engineer',
-  'NLP & LLM Engineer',
-  'Postdoctoral Researcher',
+  'an Applied LLM Data Scientist',
+  'a Senior Data Scientist',
+  'an Applied AI Scientist',
+  'a Foundation Model Scientist',
+  'an NLP & LLM Engineer',
+  'an ML Research Engineer',
 ];
 let titleIndex = 0, charIndex = 0, deleting = false;
 const el = document.getElementById('typewriter');
