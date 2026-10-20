@@ -104,6 +104,10 @@
     <div class="projects-grid">
 
       <div class="project-card">
+        <button type="button" class="project-figure" data-full="assets/img/commerce-fm-pipeline.webp" aria-label="Enlarge pipeline figure">
+          <img src="assets/img/commerce-fm-pipeline-thumb.webp" alt="Commerce Foundation Model pipeline: Amazon Reviews data, continued pretraining of Qwen3-8B, supervised fine-tuning with LoRA/QLoRA, and perplexity results" loading="lazy" width="640" height="360">
+          <span class="project-figure-hint"><i class="fas fa-expand"></i> View pipeline</span>
+        </button>
         <div class="project-header">
           <i class="fas fa-folder-open"></i>
           <span class="badge">LLM Fine-tuning</span>
@@ -117,6 +121,10 @@
       </div>
 
       <div class="project-card">
+        <button type="button" class="project-figure" data-full="assets/img/multi-agent-recommender.webp" aria-label="Enlarge pipeline figure">
+          <img src="assets/img/multi-agent-recommender-thumb.webp" alt="Multi-agent recommender architecture: coordinator, preference, search, recommendation and comparison agents with a hybrid retrieval pipeline" loading="lazy" width="640" height="360">
+          <span class="project-figure-hint"><i class="fas fa-expand"></i> View pipeline</span>
+        </button>
         <div class="project-header">
           <i class="fas fa-folder-open"></i>
           <span class="badge">Agentic AI</span>
@@ -130,6 +138,10 @@
       </div>
 
       <div class="project-card">
+        <button type="button" class="project-figure" data-full="assets/img/production-rag.webp" aria-label="Enlarge pipeline figure">
+          <img src="assets/img/production-rag-thumb.webp" alt="Production RAG pipeline: PDF ingestion, dense and sparse embeddings, Qdrant, hybrid retrieval with cross-encoder reranking, Gemini generation, FastAPI deployment" loading="lazy" width="640" height="360">
+          <span class="project-figure-hint"><i class="fas fa-expand"></i> View pipeline</span>
+        </button>
         <div class="project-header">
           <i class="fas fa-folder-open"></i>
           <span class="badge">RAG</span>
@@ -728,6 +740,12 @@
     <p>© 2026 Majid Lotfian Delouee &nbsp;·&nbsp; Almere, Netherlands &nbsp;·&nbsp; Built with GitHub Pages</p>
   </div>
 </footer>
+
+<!-- ── FIGURE LIGHTBOX ───────────────────────────────────── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pipeline figure" hidden>
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <img src="" alt="">
+</div>
 
 <script src="assets/script.js"></script>
 </body>

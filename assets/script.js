@@ -50,6 +50,31 @@ document.querySelectorAll('.pub-tab').forEach(tab => {
   });
 });
 
+// ── Project figure lightbox ──────────────────────────────────
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+let lastFigure = null;
+function closeLightbox() {
+  lightbox.hidden = true;
+  lightboxImg.src = '';
+  document.body.style.overflow = '';
+  if (lastFigure) lastFigure.focus();
+}
+document.querySelectorAll('.project-figure').forEach(btn => {
+  btn.addEventListener('click', () => {
+    lastFigure = btn;
+    lightboxImg.src = btn.dataset.full;
+    lightboxImg.alt = btn.querySelector('img').alt;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lightbox.querySelector('.lightbox-close').focus();
+  });
+});
+lightbox.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+});
+
 // ── Intersection Observer fade-in ────────────────────────────
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
