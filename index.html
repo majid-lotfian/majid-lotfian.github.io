@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Majid Lotfian Delouee | Applied LLM Data Scientist</title>
-  <meta name="description" content="Applied LLM Data Scientist at Amsterdam UMC. Foundation models, applied LLM systems, clinical AI, federated learning. PhD from University of Groningen. 70+ citations.">
-  <meta name="keywords" content="applied LLM, data scientist, LLM engineer, foundation models, machine learning, clinical AI, Amsterdam UMC, federated learning">
+  <meta name="description" content="Applied LLM Data Scientist at Amsterdam UMC. LLM fine-tuning and domain adaptation, RAG and multi-agent systems, foundation models, clinical AI, federated learning. PhD from University of Groningen. 75+ citations.">
+  <meta name="keywords" content="applied LLM, data scientist, LLM engineer, RAG, retrieval-augmented generation, multi-agent systems, agentic AI, QLoRA, fine-tuning, foundation models, machine learning, clinical AI, Amsterdam UMC, federated learning">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -44,13 +44,14 @@
       <span class="hero-title-dynamic" id="typewriter"></span><span class="cursor">|</span>
     </div>
     <p class="hero-subtitle">
-      Ph.D. Computer Science &nbsp;·&nbsp; Applied LLM Data Scientist, Amsterdam UMC &nbsp;·&nbsp; 70+ citations &nbsp;·&nbsp; EU citizen
+      Ph.D. Computer Science &nbsp;·&nbsp; Applied LLM Data Scientist, Amsterdam UMC &nbsp;·&nbsp; LLMs · RAG · Agents &nbsp;·&nbsp; 75+ citations &nbsp;·&nbsp; EU citizen
     </p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">Get in Touch</a>
-      <a href="#publications" class="btn btn-secondary">Publications</a>
+      <a href="#projects" class="btn btn-secondary">Projects</a>
       <a href="https://github.com/majid-lotfian" target="_blank" rel="noopener" class="btn btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/majid-lotfian-delouee" target="_blank" rel="noopener" class="btn btn-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=zfLlVY8AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="btn btn-icon" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
       <a href="mailto:majid.lotfian@gmail.com" class="btn btn-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
     </div>
   </div>
@@ -66,8 +67,8 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm an <strong>applied LLM and data scientist</strong> with a <strong>Ph.D. in Computer Science</strong> from the University of Groningen (2024) and postdoctoral experience at Amsterdam UMC's Translational AI Lab. I build and ship LLM-powered and foundation-model systems that solve concrete problems, from <strong>GPT-CEP</strong>, an applied LLM pipeline that automatically generates and refines event-processing rules from data patterns, to transformer-based foundation models trained on <strong>1.2M+ clinical records</strong>.</p>
-        <p>I work across the full applied ML stack: pre-training and fine-tuning foundation models, designing evaluation and embedding frameworks, and building the data pipelines and MLOps workflows that take models from prototype to production. Recent work includes federated, embedding-based prediction systems built with the University of Cambridge, and LLM-assisted rule generation over high-volume streaming data with Apache Kafka and Flink.</p>
+        <p>I'm an <strong>applied LLM and data scientist</strong> with a <strong>Ph.D. in Computer Science</strong> from the University of Groningen (2025) and postdoctoral experience at Amsterdam UMC's Translational AI Lab. I build LLM-powered and foundation-model systems that solve concrete problems: from <strong>domain-adapting an 8B-parameter LLM (Qwen3-8B)</strong> with continued pretraining and QLoRA, to <strong>retrieval-augmented generation</strong> and <strong>multi-agent systems</strong>, to transformer-based foundation models trained on <strong>1.2M+ clinical records</strong>.</p>
+        <p>I work across the full applied ML stack: pre-training and fine-tuning models on GPU clusters (H100, Slurm), building hybrid-retrieval RAG APIs with reranking and grounded generation, orchestrating LLM agents with Google ADK and LangGraph, and designing the evaluation frameworks and MLOps workflows that take models from prototype to production. Recent work includes an embedding-based federated learning pipeline deployed at Amsterdam UMC and NHS Blood and Transplant with the University of Cambridge, and <strong>GPT-CEP</strong>, an LLM pipeline that generates and refines event-processing rules over Kafka/Flink streams.</p>
         <p>My PhD and postdoctoral training gave me the depth to design and evaluate these systems rigorously; my focus now is applying that depth to build production-grade LLM and ML products. I hold research affiliations with the University of Amsterdam, University of Oslo, and TU Ilmenau.</p>
         <p class="about-location">
           <i class="fas fa-map-marker-alt"></i>&nbsp;Almere, Netherlands
@@ -76,11 +77,11 @@
       </div>
       <div class="about-stats">
         <div class="stat-card">
-          <span class="stat-number">70+</span>
+          <span class="stat-number">75+</span>
           <span class="stat-label">Citations</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number">14+</span>
+          <span class="stat-number">15+</span>
           <span class="stat-label">Publications</span>
         </div>
         <div class="stat-card">
@@ -105,11 +106,92 @@
       <div class="project-card">
         <div class="project-header">
           <i class="fas fa-folder-open"></i>
+          <span class="badge">LLM Fine-tuning</span>
+          <a href="https://github.com/majid-lotfian/commerce-foundation-model" target="_blank" rel="noopener" class="project-link" aria-label="Commerce Foundation Model on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Commerce Foundation Model</h3>
+        <p>End-to-end domain adaptation of <strong>Qwen3-8B</strong> on Amazon Reviews 2023 (131.6M interactions processed): continued pretraining with 4-bit QLoRA on a 1M-document / 108M-token corpus, then LoRA fine-tuning (r = 8/16/32) for rating prediction on H100 GPUs via Slurm. Continued pretraining cut held-out perplexity by <strong>44% (19.5 &rarr; 10.9)</strong>; the evaluation honestly reports where downstream gains did and did not follow.</p>
+        <div class="project-tags">
+          <span>Qwen3-8B</span><span>QLoRA</span><span>PEFT</span><span>bitsandbytes</span><span>H100 / Slurm</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <span class="badge">Agentic AI</span>
+          <a href="https://github.com/majid-lotfian/multi-agent-recommender" target="_blank" rel="noopener" class="project-link" aria-label="Multi-Agent Recommender on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Multi-Agent Recommender</h3>
+        <p>Conversational product recommender built with <strong>Google ADK</strong>: a coordinator agent routes between preference-extraction, search, recommendation, and comparison agents. Gemini 2.5 Flash turns natural language into Pydantic-validated preferences; hybrid retrieval (Gemini embeddings + BM25, reciprocal rank fusion) in Qdrant feeds constraint-aware ranking.</p>
+        <div class="project-tags">
+          <span>Google ADK</span><span>Gemini</span><span>Vertex AI</span><span>Qdrant</span><span>Docker</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <span class="badge">RAG</span>
+          <a href="https://github.com/majid-lotfian/production-rag" target="_blank" rel="noopener" class="project-link" aria-label="Production RAG on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Production RAG API</h3>
+        <p>Production-oriented RAG service: PDF ingestion and chunking, hybrid dense (BGE) + sparse (BM25) retrieval in Qdrant, <strong>cross-encoder reranking</strong>, and grounded Gemini answers with source citations, served through FastAPI and deployed with Docker Compose.</p>
+        <div class="project-tags">
+          <span>FastAPI</span><span>Qdrant</span><span>LangChain</span><span>Cross-encoder</span><span>Docker</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <span class="badge">Agentic AI</span>
+          <a href="https://github.com/majid-lotfian/repository-intelligence-agents" target="_blank" rel="noopener" class="project-link" aria-label="Repository Intelligence Agents on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Repository Intelligence</h3>
+        <p>LLM system that analyses software repositories and writes architecture, quality, and risk reports. Built twice: as a <a href="https://github.com/majid-lotfian/repository-intelligence-agents" target="_blank" rel="noopener">Google ADK multi-agent system</a> (coordinator + specialist agents) and as a <a href="https://github.com/majid-lotfian/repository-intelligence-pipeline" target="_blank" rel="noopener">LangGraph pipeline</a> with file-level citations and an LLM review-and-revise step.</p>
+        <div class="project-tags">
+          <span>Google ADK</span><span>LangGraph</span><span>Gemini</span><span>pytest</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <span class="badge">Clinical AI</span>
+          <span class="project-links">
+            <a href="https://majid-lotfian.github.io/Tabular-Foundation-Model-Ranker/" target="_blank" rel="noopener" class="project-link" aria-label="OpTFM Model Advisor live demo"><i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/majid-lotfian/Tabular-Foundation-Model-Ranker" target="_blank" rel="noopener" class="project-link" aria-label="OpTFM Model Advisor on GitHub"><i class="fab fa-github"></i></a>
+          </span>
+        </div>
+        <h3>OpTFM Model Advisor</h3>
+        <p>Interactive tool that ranks <strong>44 tabular foundation models</strong> for a clinical deployment. A clinician questionnaire is translated into weights over 25 sub-metrics across six dimensions (generalizability, privacy, data efficiency, scalability, interpretability, fairness). Runs fully client-side; companion to our comparative framework paper. <a href="https://majid-lotfian.github.io/Tabular-Foundation-Model-Ranker/" target="_blank" rel="noopener">Try it live &rarr;</a></p>
+        <div class="project-tags">
+          <span>JavaScript</span><span>Tabular FMs</span><span>Model Selection</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
+          <span class="badge">RAG</span>
+          <a href="https://github.com/majid-lotfian/paper-rag-assistant" target="_blank" rel="noopener" class="project-link" aria-label="Paper RAG Assistant on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Paper RAG Assistant</h3>
+        <p>RAG assistant for technical research papers: page-aware PDF parsing, local MiniLM embeddings in FAISS, and grounded Gemini answers with numbered citations and evidence tables. Declines to answer when the retrieved evidence is insufficient.</p>
+        <div class="project-tags">
+          <span>LangChain</span><span>FAISS</span><span>Gemini</span><span>PyMuPDF</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open"></i>
           <span class="badge">Applied LLM</span>
           <a href="https://github.com/majid-lotfian/GPT-CEP" target="_blank" rel="noopener" class="project-link" aria-label="GPT-CEP on GitHub"><i class="fab fa-github"></i></a>
         </div>
         <h3>GPT-CEP</h3>
-        <p>Applied LLM system for automated complex event processing rule mining: an LLM reasons over latent data patterns and generates interpretable detection rules, combined with rule-based backends over live Kafka/Flink pipelines with monitoring and feedback loops.</p>
+        <p>Applied LLM system for automated complex event processing rule mining: an LLM reasons over latent data patterns and generates interpretable detection rules, refined through a federated rule-refinement framework over live Kafka/Flink pipelines. Presented at ACM DEBS 2024.</p>
         <div class="project-tags">
           <span>Python</span><span>LLM</span><span>Apache Kafka</span><span>Apache Flink</span><span>GPT API</span>
         </div>
@@ -118,10 +200,11 @@
       <div class="project-card">
         <div class="project-header">
           <i class="fas fa-folder-open"></i>
+          <span class="badge">Foundation Model</span>
           <a href="https://github.com/majid-lotfian/FBC-Transformer" target="_blank" rel="noopener" class="project-link" aria-label="FBC-Transformer on GitHub"><i class="fab fa-github"></i></a>
         </div>
         <h3>FBC-Transformer</h3>
-        <p>Transformer-based foundation model trained from scratch on 1.2M+ clinical records. Custom tokenizer, pre-training loop with masked objectives, multi-task fine-tuning heads, and full evaluation harness with W&amp;B tracking.</p>
+        <p>Transformer-based foundation model trained from scratch on 1.2M+ full blood count records. Custom tokenizer, pre-training loop with masked objectives, multi-task fine-tuning heads, and full evaluation harness with W&amp;B tracking.</p>
         <div class="project-tags">
           <span>Python</span><span>PyTorch</span><span>HuggingFace</span><span>W&amp;B</span>
         </div>
@@ -130,48 +213,13 @@
       <div class="project-card">
         <div class="project-header">
           <i class="fas fa-folder-open"></i>
-          <a href="https://github.com/majid-lotfian/MassSpectra_FoundationModel" target="_blank" rel="noopener" class="project-link" aria-label="MassSpectra FM on GitHub"><i class="fab fa-github"></i></a>
-        </div>
-        <h3>MassSpectra Foundation Model</h3>
-        <p>Transformer-based foundation model for high-dimensional mass spectrometry signals. Pre-training on unlabelled spectra, fine-tuning for classification and retrieval. Custom positional encodings for variable-length spectral inputs.</p>
-        <div class="project-tags">
-          <span>Python</span><span>PyTorch</span><span>HuggingFace</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <i class="fas fa-folder-open"></i>
+          <span class="badge">Embeddings</span>
           <a href="https://github.com/majid-lotfian/Embedding-Space-Discovery" target="_blank" rel="noopener" class="project-link" aria-label="Embedding Space Discovery on GitHub"><i class="fab fa-github"></i></a>
         </div>
         <h3>Embedding Space Discovery</h3>
-        <p>Geometry-based framework for analysing learned embedding spaces from foundation models. Clustering, label-free correspondence metrics, nearest-neighbour retrieval, and visualisation pipelines for discovering latent clinical structure.</p>
+        <p>Geometry-based framework for analysing embedding spaces learned by foundation and classical models. Clustering, label-free correspondence metrics, nearest-neighbour retrieval, and visualisation pipelines for discovering latent clinical structure.</p>
         <div class="project-tags">
           <span>Python</span><span>PyTorch</span><span>scikit-learn</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <i class="fas fa-folder-open"></i>
-          <a href="https://github.com/majid-lotfian/APP-CEP" target="_blank" rel="noopener" class="project-link" aria-label="APP-CEP on GitHub"><i class="fab fa-github"></i></a>
-        </div>
-        <h3>APP-CEP</h3>
-        <p>Adaptive pattern-level privacy protection in complex event processing systems. Enforces privacy at the pattern level (not data level) using CEP-like processing in Apache Flink. Published in Elsevier Information Systems (2024).</p>
-        <div class="project-tags">
-          <span>Java</span><span>Apache Flink</span><span>Privacy</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <i class="fas fa-folder-open"></i>
-          <a href="https://github.com/majid-lotfian/SmartScreening-CH" target="_blank" rel="noopener" class="project-link" aria-label="SmartScreening-CH on GitHub"><i class="fab fa-github"></i></a>
-        </div>
-        <h3>SmartScreening-CH</h3>
-        <p>Clinical foundation models and ML pipelines for early detection of Congenital Hypothyroidism. Combines deep learning with classical models to support newborn screening; embedding-based patient similarity and classification.</p>
-        <div class="project-tags">
-          <span>Python</span><span>Clinical AI</span><span>Foundation Models</span>
         </div>
       </div>
 
@@ -191,33 +239,33 @@
     <div class="research-grid">
       <div class="research-card">
         <div class="research-icon"><i class="fas fa-brain"></i></div>
-        <h3>Applied LLMs &amp; Foundation Models</h3>
-        <p>Pre-training transformer models from scratch, fine-tuning, PEFT/LoRA, domain adaptation, and production LLM systems for structured tasks &mdash; including GPT-CEP, an applied LLM pipeline for automated rule generation.</p>
+        <h3>LLM Fine-tuning &amp; Domain Adaptation</h3>
+        <p>Continued pretraining and parameter-efficient fine-tuning (QLoRA / LoRA) of open LLMs such as Qwen3-8B, 4-bit quantization, multi-GPU training on H100 clusters, and evaluation that separates language-modelling gains from downstream task gains.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-icon"><i class="fas fa-robot"></i></div>
+        <h3>RAG &amp; Agentic AI</h3>
+        <p>Retrieval-augmented generation with hybrid dense + sparse search, cross-encoder reranking, and grounded, cited answers; multi-agent systems with Google ADK and LangGraph, structured outputs, and tool use.</p>
       </div>
       <div class="research-card">
         <div class="research-icon"><i class="fas fa-heartbeat"></i></div>
-        <h3>Clinical AI &amp; Healthcare</h3>
-        <p>ML pipelines on large-scale clinical datasets, patient classification, biomarker discovery, and clinical decision support systems.</p>
+        <h3>Foundation Models &amp; Clinical AI</h3>
+        <p>Transformer foundation models pre-trained from scratch on 1.2M+ clinical records, tabular foundation model benchmarking and selection, representation validation, and interpretable rule extraction for clinical decision support.</p>
       </div>
       <div class="research-card">
         <div class="research-icon"><i class="fas fa-network-wired"></i></div>
         <h3>Federated Learning</h3>
-        <p>Privacy-preserving distributed training across institutions, federated evaluation frameworks, embedding-based FL, and governance mechanisms.</p>
+        <p>Privacy-preserving training deployed across real institutions (Amsterdam UMC, NHS Blood and Transplant) with Flower, embedding-based FL on frozen foundation models, and runtime governance.</p>
       </div>
       <div class="research-card">
         <div class="research-icon"><i class="fas fa-cogs"></i></div>
         <h3>MLOps &amp; ML Engineering</h3>
-        <p>End-to-end ML pipelines, experiment tracking with W&amp;B, reproducible workflows, Docker, and production-quality system design.</p>
+        <p>End-to-end ML pipelines, FastAPI model services, Docker / Docker Compose, Slurm batch training, experiment tracking with W&amp;B, testing, and reproducible workflows.</p>
       </div>
       <div class="research-card">
         <div class="research-icon"><i class="fas fa-stream"></i></div>
-        <h3>Stream Processing &amp; Applied LLM Rule Mining</h3>
-        <p>Real-time event processing with Apache Kafka and Flink, LLM-assisted rule generation (GPT-CEP), complex event pattern detection, and high-throughput distributed pipelines.</p>
-      </div>
-      <div class="research-card">
-        <div class="research-icon"><i class="fas fa-search"></i></div>
-        <h3>Anomaly Detection</h3>
-        <p>Pattern and anomaly detection in high-volume data streams, temporal pattern analysis, distributional shift detection, and risk scoring.</p>
+        <h3>Stream Processing &amp; Anomaly Detection</h3>
+        <p>Real-time event processing with Apache Kafka and Flink, LLM-assisted rule generation (GPT-CEP), complex event pattern and anomaly detection, and privacy-aware high-throughput pipelines.</p>
       </div>
     </div>
   </div>
@@ -241,9 +289,10 @@
           <ul>
             <li>Training transformer-based foundation models from scratch on clinical datasets with <strong>1.2M+ records</strong> and 500+ features; architecture design, pre-training, multi-task fine-tuning, evaluation</li>
             <li>Building scalable PyTorch training pipelines with distributed data loading, mixed-precision training, and W&amp;B experiment tracking</li>
-            <li>Developing federated training frameworks with the <strong>University of Cambridge</strong>: multi-institutional aggregation, governance, and privacy-preserving model updates</li>
+            <li>Co-developed an embedding-based federated learning pipeline with the <strong>University of Cambridge</strong>, deployed across <strong>Amsterdam UMC and NHS Blood and Transplant</strong> with runtime governance (accepted at FLICS 2026)</li>
+            <li>Designed a comparative framework for selecting tabular foundation models in healthcare and shipped it as the <strong>OpTFM Model Advisor</strong>, a live tool ranking 44 models against clinical requirements</li>
             <li>Foundation models for mass spectrometry data (MassSpecFormer): pre-training on unlabelled spectra, fine-tuning for classification and retrieval</li>
-            <li>Publishing at npj Digital Medicine, Journal of Biomedical Informatics, and Artificial Intelligence in Medicine</li>
+            <li>Three first-author preprints in 2026 (arXiv), under review at npj Digital Medicine, Journal of Biomedical Informatics, and Artificial Intelligence in Medicine</li>
           </ul>
         </div>
       </div>
@@ -284,13 +333,13 @@
             <h3>PhD Researcher, Real-Time Systems &amp; LLM-Assisted CEP</h3>
           </div>
           <p class="timeline-org"><i class="fas fa-building"></i>&nbsp;University of Groningen · Distributed Systems Group</p>
-          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2020 – 2024 · Groningen, Netherlands</p>
+          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2020 – 2024 · Groningen, Netherlands &nbsp;(defended December 2025)</p>
           <ul>
             <li>Built real-time anomaly and event detection systems using <strong>Apache Kafka</strong> and <strong>Apache Flink</strong> for high-volume IoT data streams</li>
             <li>Developed <strong>GPT-CEP</strong>: LLM-assisted pipeline that automatically translates latent data patterns into interpretable detection rules deployed in live streaming environments</li>
-            <li>Designed privacy-preserving complex event processing: App-CEP with adaptive pattern-level privacy protection</li>
+            <li>Designed privacy-preserving complex event processing: APP-CEP with adaptive pattern-level privacy protection (<strong>Best Student Paper nominee</strong>, ICISSP 2024)</li>
             <li>Built federated learning frameworks across distributed institutional environments with runtime governance</li>
-            <li>Published at ACM DEBS, IEEE MSN, Elsevier Information Systems, and Springer SN Computer Science</li>
+            <li>Published at ACM DEBS, IEEE MSN, ICISSP, MedComNet, and Springer SN Computer Science</li>
           </ul>
         </div>
       </div>
@@ -323,7 +372,7 @@
         <div class="edu-info">
           <h3>PhD in Computer Science</h3>
           <p class="edu-school">University of Groningen, Netherlands</p>
-          <p class="edu-year">2020 – 2024</p>
+          <p class="edu-year">2020 – 2025 · Defended 1 December 2025</p>
           <p class="edu-thesis">Thesis: <em>"Adapting Event Processing in Dynamic IoT Applications: Meeting Evolving Requirements for Quality, Privacy, and Rule Autonomy"</em></p>
         </div>
       </div>
@@ -351,17 +400,42 @@
   <div class="container">
     <h2 class="section-title">Technical Skills</h2>
     <div class="skills-grid">
+      <div class="skills-group skills-group-wide">
+        <h3><i class="fas fa-robot"></i> GenAI &amp; LLM Engineering</h3>
+        <div class="skill-tags">
+          <span class="tag hl">LLM Fine-tuning</span>
+          <span class="tag hl">QLoRA / LoRA</span>
+          <span class="tag hl">RAG</span>
+          <span class="tag hl">Multi-Agent Systems</span>
+          <span class="tag">Continued Pretraining</span>
+          <span class="tag">Qwen3</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">GPT API</span>
+          <span class="tag">Google ADK</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">Vertex AI</span>
+          <span class="tag">Hybrid Search (Dense + BM25)</span>
+          <span class="tag">Cross-encoder Reranking</span>
+          <span class="tag">Qdrant</span>
+          <span class="tag">FAISS</span>
+          <span class="tag">bitsandbytes</span>
+          <span class="tag">Accelerate</span>
+          <span class="tag">Structured Outputs (Pydantic)</span>
+        </div>
+      </div>
       <div class="skills-group">
         <h3><i class="fas fa-brain"></i> ML &amp; Deep Learning</h3>
         <div class="skill-tags">
           <span class="tag hl">PyTorch</span>
           <span class="tag hl">HuggingFace</span>
-          <span class="tag">scikit-learn</span>
-          <span class="tag">XGBoost</span>
           <span class="tag">Transformers</span>
-          <span class="tag">PEFT / LoRA</span>
+          <span class="tag">PEFT</span>
           <span class="tag">Pre-training</span>
           <span class="tag">Fine-tuning</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">XGBoost</span>
+          <span class="tag">Federated Learning (Flower)</span>
           <span class="tag">imbalanced-learn</span>
           <span class="tag">Anomaly Detection</span>
         </div>
@@ -383,14 +457,17 @@
       <div class="skills-group">
         <h3><i class="fas fa-tools"></i> MLOps &amp; Infrastructure</h3>
         <div class="skill-tags">
+          <span class="tag hl">Docker</span>
+          <span class="tag hl">FastAPI</span>
           <span class="tag hl">Weights &amp; Biases</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">Slurm / HPC</span>
+          <span class="tag">NVIDIA H100</span>
           <span class="tag">MLFlow</span>
-          <span class="tag">Docker</span>
+          <span class="tag">pytest</span>
           <span class="tag">Git</span>
           <span class="tag">Linux</span>
           <span class="tag">CI/CD</span>
-          <span class="tag">Experiment Tracking</span>
-          <span class="tag">Reproducible Workflows</span>
         </div>
       </div>
       <div class="skills-group">
@@ -398,11 +475,12 @@
         <div class="skill-tags">
           <span class="tag hl">Python</span>
           <span class="tag hl">SQL</span>
-          <span class="tag">C / C++</span>
           <span class="tag">Java</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">C / C++</span>
           <span class="tag">Bash / Shell</span>
-          <span class="tag">LaTeX</span>
           <span class="tag">REST APIs</span>
+          <span class="tag">LaTeX</span>
         </div>
       </div>
       <div class="skills-group skills-group-wide">
@@ -421,47 +499,52 @@
 <section id="publications" class="section">
   <div class="container">
     <h2 class="section-title">Publications</h2>
-    <p class="section-subtitle">70+ citations &nbsp;·&nbsp; Google Scholar, June 2026</p>
+    <p class="section-subtitle">78 citations &nbsp;·&nbsp; h-index 5 &nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=zfLlVY8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>, October 2026</p>
 
     <div class="pub-tabs">
       <button class="pub-tab active" data-tab="all">All</button>
+      <button class="pub-tab" data-tab="review">Preprints &amp; Under Review</button>
       <button class="pub-tab" data-tab="journal">Journals</button>
       <button class="pub-tab" data-tab="conference">Conferences &amp; Workshops</button>
-      <button class="pub-tab" data-tab="review">Under Review</button>
     </div>
 
     <div class="pub-list" id="pubList">
 
       <!-- Applied LLM / Foundation Models / Embeddings -->
-      <div class="pub-item" data-type="conference">
-        <span class="pub-badge conference">Conference</span>
-        <p class="pub-title">Towards Federated LLM-Powered CEP Rule Generation and Refinement</p>
-        <p class="pub-venue"><em>18th ACM International Conference on Distributed and Event-based Systems (DEBS)</em> · 2024 &nbsp;<span class="pub-citations">· 3 citations</span></p>
-        <p class="pub-authors">M. Lotfian Delouee, D. G. Pernes, V. Degeler, et al.</p>
+      <div class="pub-item" data-type="review">
+        <span class="pub-badge preprint">arXiv · Under Review</span>
+        <p class="pub-title">A Comparative Framework for Evaluating Foundation Models on Tabular Data: A Case Study in Healthcare</p>
+        <p class="pub-venue"><em>arXiv:2609.22154</em> · 2026 · under review at <em>npj Digital Medicine</em></p>
+        <p class="pub-authors">M. Lotfian Delouee, S. G. J. G. in 't Veld, M. C. Schut</p>
+        <p class="pub-links"><a href="https://arxiv.org/abs/2609.22154" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> arXiv</a><a href="https://majid-lotfian.github.io/Tabular-Foundation-Model-Ranker/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live tool</a></p>
       </div>
       <div class="pub-item" data-type="review">
-        <span class="pub-badge review">Under Review</span>
-        <p class="pub-title">A Comparative Framework for Evaluating Foundation Models on Tabular Data: A Case Study in Healthcare</p>
-        <p class="pub-venue"><em>npj Digital Medicine</em></p>
-        <p class="pub-authors">M. Lotfian Delouee et al.</p>
+        <span class="pub-badge preprint">arXiv · Under Review</span>
+        <p class="pub-title">From Latent Biomarkers to Clinical Rules: Embedding-Guided Rule Mining and Attribution-Based Translation for Interpretable Tabular Learning</p>
+        <p class="pub-venue"><em>arXiv:2609.22155</em> · 2026 · under review at <em>Artificial Intelligence in Medicine</em></p>
+        <p class="pub-authors">M. Lotfian Delouee, H. Ayoobi, S. G. J. G. in 't Veld, M. C. Schut</p>
+        <p class="pub-links"><a href="https://arxiv.org/abs/2609.22155" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> arXiv</a></p>
+      </div>
+      <div class="pub-item" data-type="review">
+        <span class="pub-badge preprint">arXiv · Under Review</span>
+        <p class="pub-title">A Correspondence Score for Validating Learned Patient Representations in Clinical Tabular Data</p>
+        <p class="pub-venue"><em>arXiv:2608.27489</em> · 2026 · under review at <em>Journal of Biomedical Informatics</em></p>
+        <p class="pub-authors">M. Lotfian Delouee, S. G. J. G. in 't Veld, M. C. Schut</p>
+        <p class="pub-links"><a href="https://arxiv.org/abs/2608.27489" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> arXiv</a></p>
       </div>
       <div class="pub-item" data-type="conference">
         <span class="pub-badge workshop">Workshop · Accepted</span>
         <p class="pub-title">Embedding-Based Federated Learning with Runtime Governance for Iron Deficiency Prediction</p>
-        <p class="pub-venue"><em>FL-ICML Workshop on Federated Learning in the Age of Foundation Models (FLICS)</em> · <strong>Accepted 2026</strong> · with University of Cambridge</p>
-        <p class="pub-authors">F. Zhang, S. Deltadahl, M. Lotfian Delouee, D. Kreuter, et al.</p>
+        <p class="pub-venue"><em>FL-ICML Workshop on Federated Learning in the Age of Foundation Models (FLICS)</em> · <strong>Accepted 2026</strong> · with University of Cambridge &amp; NHS Blood and Transplant &nbsp;<span class="pub-citations">· 1 citation</span></p>
+        <p class="pub-authors">F. Zhang, S. Deltadahl, M. Lotfian Delouee, D. Kreuter, J. Taylor, A. Visser, BloodCounts! Consortium, et al.</p>
+        <p class="pub-links"><a href="https://arxiv.org/abs/2605.21563" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> arXiv:2605.21563</a></p>
       </div>
-      <div class="pub-item" data-type="review">
-        <span class="pub-badge review">Under Review</span>
-        <p class="pub-title">A Label-Free Correspondence Score for Validating Learned Patient Representations in Clinical Tabular Data</p>
-        <p class="pub-venue"><em>Journal of Biomedical Informatics</em></p>
-        <p class="pub-authors">M. Lotfian Delouee et al.</p>
-      </div>
-      <div class="pub-item" data-type="review">
-        <span class="pub-badge review">Under Review</span>
-        <p class="pub-title">From Latent Biomarkers to Clinical Rules: Embedding-Guided Rule Mining and Attribution-Based Translation for Interpretable Tabular Learning</p>
-        <p class="pub-venue"><em>Artificial Intelligence in Medicine</em></p>
-        <p class="pub-authors">M. Lotfian Delouee et al.</p>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge poster">Poster</span>
+        <p class="pub-title">Towards Federated LLM-Powered CEP Rule Generation and Refinement</p>
+        <p class="pub-venue"><em>18th ACM International Conference on Distributed and Event-based Systems (DEBS)</em> · 2024 &nbsp;<span class="pub-citations">· 4 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, D. G. Pernes, V. Degeler, B. Koldehofe</p>
+        <p class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3629104.3672429" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> ACM DL</a><a href="https://github.com/majid-lotfian/GPT-CEP" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a></p>
       </div>
       <div class="pub-item" data-type="review">
         <span class="pub-badge preprint">Under Submission</span>
@@ -479,48 +562,63 @@
       <!-- Journals -->
       <div class="pub-item" data-type="journal">
         <span class="pub-badge journal">Journal</span>
-        <p class="pub-title">App-CEP: Adaptive Pattern-Level Privacy Protection in Complex Event Processing Systems</p>
-        <p class="pub-venue"><em>Information Systems</em>, Elsevier · 2024 &nbsp;<span class="pub-citations">· 4 citations</span></p>
-        <p class="pub-authors">M. Lotfian Delouee, V. Degeler, P. Amthor, et al.</p>
+        <p class="pub-title">Pattern-Level Privacy Protection in Event-Based Systems</p>
+        <p class="pub-venue"><em>SN Computer Science</em> 6 (8), Springer · 2025 &nbsp;<span class="pub-citations">· 2 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, V. Degeler, P. Amthor, M. C. Schut, B. Koldehofe</p>
+        <p class="pub-links"><a href="https://link.springer.com/article/10.1007/s42979-025-04574-1" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Springer</a></p>
       </div>
       <div class="pub-item" data-type="journal">
         <span class="pub-badge journal">Journal</span>
-        <p class="pub-title">Pattern-Level Privacy Protection in Event-Based Systems</p>
-        <p class="pub-venue"><em>SN Computer Science</em>, Springer · 2025</p>
-        <p class="pub-authors">M. Lotfian Delouee, V. Degeler, P. Amthor, M. C. Schut, et al.</p>
+        <p class="pub-title">Scheduling Data-driven Workflows in Multi-cloud Environment</p>
+        <p class="pub-venue"><em>Journal of Computer and Knowledge Engineering</em> 1 (1) · 2018</p>
+        <p class="pub-authors">N. Soveizi, S. Abrishami, M. Lotfian Delouee</p>
       </div>
 
       <!-- Conferences -->
       <div class="pub-item" data-type="conference">
         <span class="pub-badge conference">Conference</span>
-        <p class="pub-title">AQUA-CEP: Adaptive Quality-Aware Complex Event Processing in the Internet of Things</p>
-        <p class="pub-venue"><em>17th ACM International Conference on Distributed and Event-based Systems (DEBS)</em> · 2023 &nbsp;<span class="pub-citations">· 16 citations</span></p>
-        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, et al.</p>
-      </div>
-      <div class="pub-item" data-type="conference">
-        <span class="pub-badge conference">Conference</span>
-        <p class="pub-title">Towards Adaptive Quality-Aware Complex Event Processing in the Internet of Things</p>
-        <p class="pub-venue"><em>18th IEEE International Conference on Mobility, Sensing and Networking (MSN)</em> · 2022 &nbsp;<span class="pub-citations">· 8 citations</span></p>
-        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, et al.</p>
+        <p class="pub-title">APP-CEP: Adaptive Pattern-Level Privacy Protection in Complex Event Processing Systems</p>
+        <p class="pub-venue"><em>10th International Conference on Information Systems Security and Privacy (ICISSP)</em> · 2024 · <strong>Best Student Paper nominee</strong> &nbsp;<span class="pub-citations">· 5 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, V. Degeler, P. Amthor, B. Koldehofe</p>
+        <p class="pub-links"><a href="https://www.scitepress.org/Papers/2024/123587/123587.pdf" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a><a href="https://github.com/majid-lotfian/APP-CEP" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a></p>
       </div>
       <div class="pub-item" data-type="conference">
         <span class="pub-badge conference">Conference</span>
         <p class="pub-title">Driving Towards Efficiency: Adaptive Resource-Aware Clustered Federated Learning in Vehicular Networks</p>
-        <p class="pub-venue"><em>22nd Mediterranean Communication and Computer Networking Conference (MedComNet)</em> · 2024 &nbsp;<span class="pub-citations">· 7 citations</span></p>
-        <p class="pub-authors">A. Khalil, M. Lotfian Delouee, V. Degeler, et al.</p>
+        <p class="pub-venue"><em>22nd Mediterranean Communication and Computer Networking Conference (MedComNet)</em> · 2024 &nbsp;<span class="pub-citations">· 6 citations</span></p>
+        <p class="pub-authors">A. Khalil, M. Lotfian Delouee, V. Degeler, T. Meuser, A. F. Anta, B. Koldehofe</p>
+      </div>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge conference">Conference</span>
+        <p class="pub-title">AQuA-CEP: Adaptive Quality-Aware Complex Event Processing in the Internet of Things</p>
+        <p class="pub-venue"><em>17th ACM International Conference on Distributed and Event-based Systems (DEBS)</em> · 2023 &nbsp;<span class="pub-citations">· 19 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, V. Degeler</p>
+        <p class="pub-links"><a href="https://github.com/majid-lotfian/AQuA-CEP-code" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a></p>
       </div>
       <div class="pub-item" data-type="conference">
         <span class="pub-badge poster">Poster</span>
         <p class="pub-title">Towards Pattern-Level Privacy Protection in Distributed Complex Event Processing</p>
-        <p class="pub-venue"><em>17th ACM DEBS</em> · 2023 &nbsp;<span class="pub-citations">· 3 citations</span></p>
-        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, et al.</p>
+        <p class="pub-venue"><em>17th ACM DEBS</em> · 2023 &nbsp;<span class="pub-citations">· 4 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, V. Degeler</p>
+      </div>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge conference">Conference</span>
+        <p class="pub-title">Towards Adaptive Quality-Aware Complex Event Processing in the Internet of Things</p>
+        <p class="pub-venue"><em>18th IEEE International Conference on Mobility, Sensing and Networking (MSN)</em> · 2022 &nbsp;<span class="pub-citations">· 9 citations</span></p>
+        <p class="pub-authors">M. Lotfian Delouee, B. Koldehofe, V. Degeler</p>
+      </div>
+      <div class="pub-item" data-type="conference">
+        <span class="pub-badge conference">Conference</span>
+        <p class="pub-title">Scheduling Data-driven Workflows in Multi-cloud Environment</p>
+        <p class="pub-venue"><em>7th IEEE International Conference on Cloud Computing Technology and Science (CloudCom)</em> · 2015 &nbsp;<span class="pub-citations">· 28 citations</span></p>
+        <p class="pub-authors">N. Soveizi, S. Abrishami, M. Lotfian Delouee</p>
       </div>
 
     </div>
 
     <div class="thesis-note">
       <i class="fas fa-book"></i>
-      <div><strong>PhD Thesis (2025):</strong> "Adapting Event Processing in Dynamic IoT Applications: Meeting Evolving Requirements for Quality, Privacy, and Rule Autonomy", University of Groningen</div>
+      <div><strong>PhD Thesis (2025):</strong> "Adapting Event Processing in Dynamic IoT Applications: Meeting Evolving Requirements for Quality, Privacy, and Rule Autonomy", University of Groningen · defended 1 December 2025 · <a href="https://doi.org/10.33612/diss.1436752359" target="_blank" rel="noopener">DOI</a></div>
     </div>
 
   </div>
@@ -531,6 +629,33 @@
   <div class="container">
     <h2 class="section-title">News &amp; Updates</h2>
     <div class="news-list">
+
+      <div class="news-card">
+        <div class="news-meta">
+          <span class="news-date"><i class="far fa-calendar-alt"></i> October 2026</span>
+          <span class="news-tag tag-update">Project</span>
+        </div>
+        <p class="news-text">Released <strong>Commerce Foundation Model</strong>: end-to-end domain adaptation of Qwen3-8B on Amazon Reviews 2023 with continued pretraining and QLoRA fine-tuning on H100s, cutting held-out perplexity by 44%. Alongside it, a <strong>multi-agent recommender</strong> built with Google ADK, Gemini, and hybrid retrieval in Qdrant.</p>
+        <a href="https://github.com/majid-lotfian/commerce-foundation-model" target="_blank" rel="noopener" class="news-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="news-card">
+        <div class="news-meta">
+          <span class="news-date"><i class="far fa-calendar-alt"></i> August 2026</span>
+          <span class="news-tag tag-publication">Publication</span>
+        </div>
+        <p class="news-text">Three first-author preprints now on arXiv: a comparative framework for evaluating tabular foundation models in healthcare, a correspondence score for validating learned patient representations, and embedding-guided rule mining that translates latent biomarkers into interpretable clinical rules.</p>
+        <a href="https://arxiv.org/abs/2609.22154" target="_blank" rel="noopener" class="news-link">Read on arXiv <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="news-card">
+        <div class="news-meta">
+          <span class="news-date"><i class="far fa-calendar-alt"></i> August 2026</span>
+          <span class="news-tag tag-update">Project</span>
+        </div>
+        <p class="news-text">Built a series of applied GenAI systems: a <strong>production RAG API</strong> (hybrid retrieval, cross-encoder reranking, FastAPI, Docker), a <strong>paper RAG assistant</strong>, and <strong>repository intelligence</strong> agents in both Google ADK and LangGraph. Also launched the <strong>OpTFM Model Advisor</strong>, a live tool for choosing tabular foundation models for clinical use.</p>
+        <a href="https://github.com/majid-lotfian/production-rag" target="_blank" rel="noopener" class="news-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+      </div>
 
       <div class="news-card">
         <div class="news-meta">
@@ -546,17 +671,8 @@
           <span class="news-date"><i class="far fa-calendar-alt"></i> May 2026</span>
           <span class="news-tag tag-publication">Publication</span>
         </div>
-        <p class="news-text">Our paper on embedding-based federated learning with runtime governance for iron deficiency prediction has been accepted at the FL-ICML Workshop (FLICS) 2026, in collaboration with the University of Cambridge. Looking forward to sharing the work.</p>
-        <a href="https://linkedin.com/in/majid-lotfian-delouee" target="_blank" rel="noopener" class="news-link">View on LinkedIn <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="news-card">
-        <div class="news-meta">
-          <span class="news-date"><i class="far fa-calendar-alt"></i> April 2026</span>
-          <span class="news-tag tag-research">Research</span>
-        </div>
-        <p class="news-text">Three papers currently under review: a comparative framework for evaluating foundation models on clinical tabular data (npj Digital Medicine), a label-free metric for validating learned patient representations (Journal of Biomedical Informatics), and a method for translating learned biomarkers into interpretable clinical rules (AI in Medicine).</p>
-        <a href="https://linkedin.com/in/majid-lotfian-delouee" target="_blank" rel="noopener" class="news-link">View on LinkedIn <i class="fas fa-arrow-right"></i></a>
+        <p class="news-text">Our paper on embedding-based federated learning with runtime governance for iron deficiency prediction, deployed across Amsterdam UMC and NHS Blood and Transplant, has been accepted at the FL-ICML Workshop (FLICS) 2026, in collaboration with the University of Cambridge.</p>
+        <a href="https://arxiv.org/abs/2605.21563" target="_blank" rel="noopener" class="news-link">Read on arXiv <i class="fas fa-arrow-right"></i></a>
       </div>
 
     </div>
@@ -564,10 +680,10 @@
 </section>
 
 <!-- ── CONTACT ────────────────────────────────────────────── -->
-<section id="contact" class="section section-alt">
+<section id="contact" class="section">
   <div class="container">
     <h2 class="section-title">Get in Touch</h2>
-    <p class="section-subtitle">Open to applied LLM, data science, and foundation model roles, as well as research collaborations. EU citizen, no visa required.</p>
+    <p class="section-subtitle">Open to applied LLM, GenAI, data science, and foundation model roles, as well as research collaborations. EU citizen, no visa required.</p>
     <div class="contact-grid">
       <a href="mailto:majid.lotfian@gmail.com" class="contact-card">
         <i class="fas fa-envelope"></i>
@@ -581,10 +697,10 @@
         <i class="fab fa-github"></i>
         <span>GitHub Repos</span>
       </a>
-      <div class="contact-card no-link">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Almere, Netherlands</span>
-      </div>
+      <a href="https://scholar.google.com/citations?user=zfLlVY8AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="contact-card">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Google Scholar</span>
+      </a>
     </div>
   </div>
 </section>
@@ -592,7 +708,7 @@
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer>
   <div class="container">
-    <p>© 2026 Majid Lotfian Delouee &nbsp;·&nbsp; Built with GitHub Pages</p>
+    <p>© 2026 Majid Lotfian Delouee &nbsp;·&nbsp; Almere, Netherlands &nbsp;·&nbsp; Built with GitHub Pages</p>
   </div>
 </footer>
 

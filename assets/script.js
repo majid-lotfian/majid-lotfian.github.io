@@ -15,10 +15,10 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // ── Typewriter ───────────────────────────────────────────────
 const titles = [
   'an Applied LLM Data Scientist',
-  'a Senior Data Scientist',
-  'an Applied AI Scientist',
+  'a GenAI & RAG Engineer',
+  'a Multi-Agent Systems Builder',
   'a Foundation Model Scientist',
-  'an NLP & LLM Engineer',
+  'a Senior Data Scientist',
   'an ML Research Engineer',
 ];
 let titleIndex = 0, charIndex = 0, deleting = false;
