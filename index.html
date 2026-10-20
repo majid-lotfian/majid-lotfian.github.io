@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Majid Lotfian Delouee | Applied LLM Data Scientist</title>
-  <meta name="description" content="Applied LLM Data Scientist at Amsterdam UMC. LLM fine-tuning and domain adaptation, RAG and multi-agent systems, foundation models, clinical AI, federated learning. PhD from University of Groningen. 75+ citations.">
+  <meta name="description" content="Applied LLM Data Scientist, formerly at Amsterdam UMC. LLM fine-tuning and domain adaptation, RAG and multi-agent systems, foundation models, clinical AI, federated learning. PhD from University of Groningen. 75+ citations.">
   <meta name="keywords" content="applied LLM, data scientist, LLM engineer, RAG, retrieval-augmented generation, multi-agent systems, agentic AI, QLoRA, fine-tuning, foundation models, machine learning, clinical AI, Amsterdam UMC, federated learning">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
       <span class="hero-title-dynamic" id="typewriter"></span><span class="cursor">|</span>
     </div>
     <p class="hero-subtitle">
-      Ph.D. Computer Science &nbsp;·&nbsp; Applied LLM Data Scientist, Amsterdam UMC &nbsp;·&nbsp; LLMs · RAG · Agents &nbsp;·&nbsp; 75+ citations &nbsp;·&nbsp; EU citizen
+      Ph.D. Computer Science &nbsp;·&nbsp; Applied LLM Data Scientist &nbsp;·&nbsp; LLMs · RAG · Agents &nbsp;·&nbsp; 75+ citations &nbsp;·&nbsp; EU citizen
     </p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -67,9 +67,9 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm an <strong>applied LLM and data scientist</strong> with a <strong>Ph.D. in Computer Science</strong> from the University of Groningen (2025) and postdoctoral experience at Amsterdam UMC's Translational AI Lab. I build LLM-powered and foundation-model systems that solve concrete problems: from <strong>domain-adapting an 8B-parameter LLM (Qwen3-8B)</strong> with continued pretraining and QLoRA, to <strong>retrieval-augmented generation</strong> and <strong>multi-agent systems</strong>, to transformer-based foundation models trained on <strong>1.2M+ clinical records</strong>.</p>
-        <p>I work across the full applied ML stack: pre-training and fine-tuning models on GPU clusters (H100, Slurm), building hybrid-retrieval RAG APIs with reranking and grounded generation, orchestrating LLM agents with Google ADK and LangGraph, and designing the evaluation frameworks and MLOps workflows that take models from prototype to production. Recent work includes an embedding-based federated learning pipeline deployed at Amsterdam UMC and NHS Blood and Transplant with the University of Cambridge, and <strong>GPT-CEP</strong>, an LLM pipeline that generates and refines event-processing rules over Kafka/Flink streams.</p>
-        <p>My PhD and postdoctoral training gave me the depth to design and evaluate these systems rigorously; my focus now is applying that depth to build production-grade LLM and ML products. I hold research affiliations with the University of Amsterdam, University of Oslo, and TU Ilmenau.</p>
+        <p>I'm an <strong>applied LLM and data scientist</strong> with a <strong>Ph.D. in Computer Science</strong> from the University of Groningen (2025) and two years as an applied scientist at Amsterdam UMC's Translational AI Lab. I now work independently on applied GenAI systems. I build LLM-powered and foundation-model systems that solve concrete problems: from <strong>domain-adapting an 8B-parameter LLM (Qwen3-8B)</strong> with continued pretraining and QLoRA, to <strong>retrieval-augmented generation</strong> and <strong>multi-agent systems</strong>, to transformer-based foundation models trained on <strong>1.2M+ clinical records</strong>.</p>
+        <p>I work across the full applied ML stack: pre-training and fine-tuning models on GPU clusters (H100, Slurm), building hybrid-retrieval RAG APIs with reranking and grounded generation, orchestrating LLM agents with Google ADK and LangGraph, and designing the evaluation frameworks and MLOps workflows that take models from prototype to production. Earlier work includes an embedding-based federated learning pipeline deployed at Amsterdam UMC and NHS Blood and Transplant with the University of Cambridge, and <strong>GPT-CEP</strong>, an LLM pipeline that generates and refines event-processing rules over Kafka/Flink streams.</p>
+        <p>My PhD and postdoctoral training gave me the depth to design and evaluate these systems rigorously; my focus now is applying that depth to build production-grade LLM and ML products. I've also collaborated with the University of Amsterdam, University of Oslo, TU Ilmenau, and the University of Cambridge.</p>
         <p class="about-location">
           <i class="fas fa-map-marker-alt"></i>&nbsp;Almere, Netherlands
           &nbsp;<span class="badge">EU Citizen · No visa required</span>
@@ -281,17 +281,34 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <div class="timeline-header">
-            <h3>Senior Applied Scientist, Foundation Models &amp; Clinical AI</h3>
+            <h3>Independent Applied LLM Engineer</h3>
             <span class="timeline-badge current">Current</span>
           </div>
-          <p class="timeline-org"><i class="fas fa-building"></i>&nbsp;Amsterdam UMC · Translational AI Lab</p>
-          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2024 – Present · Amsterdam, Netherlands</p>
+          <p class="timeline-org"><i class="fas fa-laptop-code"></i>&nbsp;Independent GenAI Projects</p>
+          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2026 – Present · Almere, Netherlands</p>
           <ul>
-            <li>Training transformer-based foundation models from scratch on clinical datasets with <strong>1.2M+ records</strong> and 500+ features; architecture design, pre-training, multi-task fine-tuning, evaluation</li>
-            <li>Building scalable PyTorch training pipelines with distributed data loading, mixed-precision training, and W&amp;B experiment tracking</li>
+            <li>Domain-adapted <strong>Qwen3-8B</strong> to e-commerce: continued pretraining with 4-bit QLoRA on 108M tokens of Amazon Reviews, then LoRA fine-tuning on H100 GPUs via Slurm, cutting held-out perplexity by <strong>44%</strong></li>
+            <li>Built a <strong>multi-agent recommender</strong> with Google ADK, Gemini 2.5 Flash, and Vertex AI: coordinator + specialist agents, Pydantic-validated preferences, hybrid retrieval in Qdrant</li>
+            <li>Shipped a <strong>production-oriented RAG API</strong>: hybrid dense + BM25 retrieval, cross-encoder reranking, grounded Gemini answers with citations, FastAPI, Docker Compose</li>
+            <li>Built repository-analysis agents in both <strong>Google ADK</strong> and <strong>LangGraph</strong>, plus a cited research-paper RAG assistant (LangChain, FAISS)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Senior Applied Scientist, Foundation Models &amp; Clinical AI</h3>
+          </div>
+          <p class="timeline-org"><i class="fas fa-building"></i>&nbsp;Amsterdam UMC · Translational AI Lab</p>
+          <p class="timeline-date"><i class="far fa-calendar-alt"></i>&nbsp;2024 – 2026 · Amsterdam, Netherlands</p>
+          <ul>
+            <li>Trained transformer-based foundation models from scratch on clinical datasets with <strong>1.2M+ records</strong> and 500+ features; architecture design, pre-training, multi-task fine-tuning, evaluation</li>
+            <li>Built scalable PyTorch training pipelines with distributed data loading, mixed-precision training, and W&amp;B experiment tracking</li>
             <li>Co-developed an embedding-based federated learning pipeline with the <strong>University of Cambridge</strong>, deployed across <strong>Amsterdam UMC and NHS Blood and Transplant</strong> with runtime governance (accepted at FLICS 2026)</li>
             <li>Designed a comparative framework for selecting tabular foundation models in healthcare and shipped it as the <strong>OpTFM Model Advisor</strong>, a live tool ranking 44 models against clinical requirements</li>
-            <li>Foundation models for mass spectrometry data (MassSpecFormer): pre-training on unlabelled spectra, fine-tuning for classification and retrieval</li>
+            <li>Developed foundation models for mass spectrometry data (MassSpecFormer): pre-training on unlabelled spectra, fine-tuning for classification and retrieval</li>
             <li>Three first-author preprints in 2026 (arXiv), under review at npj Digital Medicine, Journal of Biomedical Informatics, and Artificial Intelligence in Medicine</li>
           </ul>
         </div>
@@ -683,7 +700,7 @@
 <section id="contact" class="section">
   <div class="container">
     <h2 class="section-title">Get in Touch</h2>
-    <p class="section-subtitle">Open to applied LLM, GenAI, data science, and foundation model roles, as well as research collaborations. EU citizen, no visa required.</p>
+    <p class="section-subtitle">Currently open to new applied LLM, GenAI, data science, and foundation model roles, as well as research collaborations. EU citizen, no visa required.</p>
     <div class="contact-grid">
       <a href="mailto:majid.lotfian@gmail.com" class="contact-card">
         <i class="fas fa-envelope"></i>
